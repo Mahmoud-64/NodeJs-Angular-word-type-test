@@ -1,0 +1,60 @@
+.card {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: white;
+  width: 50%;
+  margin: 35px auto;
+  height: 170px !important;
+  text-align: center;
+}
+
+p.word {
+  text-align: left;
+  margin-bottom: 20px;
+  display: list-item;
+  margin-left: 1em;
+}
+.actions {
+  text-align: center;
+}
+
+button {
+  margin: 0.5em 2.5em;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+.actions button:hover:not([disabled]) {
+  background-color: #5a1a01;
+  border-color: #5a1a01;
+  color: white;
+  transition: 0.2s;
+}
+
+.actions button.chosenAnswer {
+  background-color: #5a1a01;
+  border-color: #5a1a01;
+  color: white;
+}
+
+.feedback {
+  font-size: 0.7rem;
+  margin-top: 2em;
+}
+p.correctAnswer {
+  color: rgb(16, 243, 16);
+}
+p.wrongAnswer {
+  color: red;
+}

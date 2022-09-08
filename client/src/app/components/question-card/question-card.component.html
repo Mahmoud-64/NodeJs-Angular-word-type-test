@@ -1,0 +1,47 @@
+<div class="card">
+  <p class="word">{{ wordData.word }}</p>
+  <div class="actions">
+    <button
+      [disabled]="isAnswerSubmitted"
+      [ngClass]="{ chosenAnswer: chosenAnswer == 'noun' }"
+      (click)="submitAnswer('noun')"
+      class="nounButtonClasses"
+    >
+      Noun
+    </button>
+    <button
+      [disabled]="isAnswerSubmitted"
+      [ngClass]="{ chosenAnswer: chosenAnswer == 'verb' }"
+      (click)="submitAnswer('verb')"
+      class="verbButtonClasses"
+    >
+      Verb
+    </button>
+    <button
+      [disabled]="isAnswerSubmitted"
+      [ngClass]="{ chosenAnswer: chosenAnswer == 'adjective' }"
+      (click)="submitAnswer('adjective')"
+      class="adjectiveButtonClasses"
+    >
+      Adjective
+    </button>
+    <button
+      [disabled]="isAnswerSubmitted"
+      [ngClass]="{ chosenAnswer: chosenAnswer == 'adverb' }"
+      (click)="submitAnswer('adverb')"
+      class="adverbButtonClasses"
+    >
+      Adverb
+    </button>
+  </div>
+
+  <p
+    *ngIf="isAnswerSubmitted && isAnswerCorrect"
+    class="correctAnswer feedback"
+  >
+    Correct answer
+  </p>
+  <p *ngIf="isAnswerSubmitted && !isAnswerCorrect" class="wrongAnswer feedback">
+    Wrong answer
+  </p>
+</div>

@@ -1,0 +1,23 @@
+<ngb-progressbar
+  [showValue]="true"
+  type="warning"
+  [value]="AnsweredQuestionsPercentage"
+  [max]="100"
+  style="width: 100%; position: fixed; top: 0; z-index: 10"
+  class="progress-bar-striped"
+></ngb-progressbar>
+<h6 class="title">Please select the type of each word:</h6>
+<div *ngFor="let wordData of wordsData">
+  <app-question-card [wordData]="wordData"></app-question-card>
+</div>
+<div class="tryAgain">
+  <button
+    *ngIf="AnsweredQuestionsPercentage == 100"
+    mat-raised-button
+    color="primary"
+    mat-dialog-close
+    (click)="tryAgain()"
+  >
+    Try again
+  </button>
+</div>

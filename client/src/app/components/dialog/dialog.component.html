@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Result</h1>
+<div>
+  <p>your score: {{ score }}</p>
+  <p>your rank: {{ rank }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="tryAgain()">Try again</button>
+  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+</div>
